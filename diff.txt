@@ -1,0 +1,321 @@
+diff --git a/css/styles.css b/css/styles.css
+index c50683b..9c68119 100644
+--- a/css/styles.css
++++ b/css/styles.css
+@@ -47,6 +47,14 @@ ul
+   border-bottom:  1px solid #ECECEC;
+ }
+ 
++.portfolio-name {
++  border-left: 1px solid #EEEEEE;
++  border-right: 1px solid #EEEEEE;
++  border-bottom: 1px solid #EEEEEE;
++}
++
++
++
+ /* .staff-card {
+   margin-left: 30px;
+ } */
+@@ -184,11 +192,9 @@ ul
+ }
+ 
+ .container {
+-  max-width: 1200px;
+-  margin-left: auto;
+-  margin-right: auto;
++  width: 1200px;
+   padding: 0 15px;
+-  margin: o auto;
++  margin: 0 auto;
+ }
+ 
+ .btn {
+@@ -407,26 +413,29 @@ ul
+ }
+ 
+ .staff {
+-  margin-top: 30px;
+ }
+ 
+ .staff-profil {
+   margin-top: 10px;
+ }
+ 
+-.title-name {
++.portfolio-name {
++  padding: 24px 20px;
++}
++
++/* .title-name {
+   margin-top: 20px;
+   margin-left: 24px;
+   margin-right: 24px;
+   margin-bottom: 20px;
+ 
+-}
++} */
+ 
+ .title-product {
+   margin-top: 4px;
+-  margin-left: 24px;
++  /* margin-left: 24px;
+   margin-right: 24px;
+-  margin-bottom: 20px;
++  margin-bottom: 20px; */
+ }
+ 
+ 
+@@ -488,6 +497,11 @@ ul
+     color: #2196F3;
+ }
+ 
++.staff-name {
++  padding-top: 30px;
++  padding-bottom: 30px;
++}
++
+ 
+ 
+ .text-default {
+@@ -510,3 +524,8 @@ ul
+   color: #2196F3;
+ 
+ }
++
++.header-buttom:hover,
++.header-buttom:focus {
++color: #2196F3;
++}
+\ No newline at end of file
+diff --git a/index.html b/index.html
+index 401cd2d..e9b2e14 100644
+--- a/index.html
++++ b/index.html
+@@ -8,27 +8,28 @@
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"rel="stylesheet">
+-    <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css">
++    <!-- <link rel="stylesheet" href="node_modules/modern-normalize/modern-normalize.css"> -->
++    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"/>
+     <title>Document</title>
+ </head>
+ <body>
+     <!--Title-->
+     <header class="header-main">
+         <div class="container">
+-        <div class="main-nav">
+-        <nav class="nav">
+-            <a class="logo" href="/">Web <span class="logo-black">Studio</span></a>
+-            <ul class="list list-nav">
+-                <li class="item"><a class="header-buttom text-default" href="">Студия</a></li>
+-                <li class="item"><a class="header-buttom text-default" href="./portfolio.html">Портфолио</a></li>
+-                <li class="item"><a class="header-buttom text-default" href="">Контакты</a></li>
+-            </ul>
+-        </nav>
+-        <div class="contact-block">
+-        <a class="contacts-link-header text-default list" href="+info@devstudio.com">info@devstudio.com</a>
+-        <a class="contacts-link-header text-default list" href="+380961111111">+380961111111</a>
+-        </div>
+-        </div>
++            <div class="main-nav">
++                <nav class="nav">
++                    <a class="logo" href="/">Web <span class="logo-black">Studio</span></a>
++                    <ul class="list list-nav">
++                        <li class="item"><a class="header-buttom text-default" href="">Студия</a></li>
++                        <li class="item"><a class="header-buttom text-default" href="./portfolio.html">Портфолио</a></li>
++                        <li class="item"><a class="header-buttom text-default" href="">Контакты</a></li>
++                    </ul>
++                </nav>
++                <div class="contact-block">
++                    <a class="contacts-link-header text-default list" href="+info@devstudio.com">info@devstudio.com</a>
++                    <a class="contacts-link-header text-default list" href="+380961111111">+380961111111</a>
++                </div>
++            </div>
+         </div>
+     </header>
+     <!--Hero block-->
+@@ -44,20 +45,28 @@
+                 <div class="container">
+                     <ul class="list list-feature">
+                         <li class="item">
+-                            <h3 class="text">Внимание к деталям</h3>
+-                            <p class="text-title" >Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
++                            <div>
++                                <h3 class="text">Внимание к деталям</h3>
++                                <p class="text-title" >Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
++                            </div>
+                         </li>
+                         <li class="item">
+-                            <h3 class="text">Пунктуальность</h3>
+-                            <p class="text-title">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
++                            <div>
++                                <h3 class="text">Пунктуальность</h3>
++                                <p class="text-title">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
++                            </div>
+                         </li>
+                         <li class="item">
+-                            <h3 class="text">Планирование</h3>
+-                            <p class="text-title">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
++                            <div>
++                                <h3 class="text">Планирование</h3>
++                                <p class="text-title">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
++                            </div>
+                         </li>
+                         <li class="item">
+-                            <h3 class="text">Современные технологии</h3>
+-                            <p class="text-title">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
++                            <div>
++                                <h3 class="text">Современные технологии</h3>
++                                <p class="text-title">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
++                            </div>
+                         </li>
+                     </ul>
+                 </div>
+@@ -81,23 +90,31 @@
+                     <ul class="item-list list">
+                         <li class="staff-card">
+                             <img src="./img/igor.jpg" alt="игорь фото" width="270"/>
+-                            <h3 class="staff">Игорь Демьяненко</h3>
+-                            <p class="staff-profil">Product Designer</p>
++                            <div class="staff-name">
++                                <h3 class="staff">Игорь Демьяненко</h3>
++                                <p class="staff-profil">Product Designer</p>
++                            </div>
+                         </li>
+                         <li class="staff-card">
+                             <img src="./img/olya.jpg" alt="оля фото" width="270"/>
+-                            <h3 class="staff">Ольга Репина</h3>
+-                            <p class="staff-profil">Frontend Developer</p>
++                            <div class="staff-name">
++                                <h3 class="staff">Михаил Ермаков</h3>
++                                <p class="staff-profil">Frontend Developer</p>
++                            </div>
+                         </li>
+                         <li class="staff-card">
+                             <img src="./img/mikola.jpg" alt="николай фото" width="270"/>
+-                            <h3 class="staff">Николай Тарасов</h3>
+-                            <p class="staff-profil">Marketing</p>
++                            <div class="staff-name">
++                                <h3 class="staff">Николай Тарасов</h3>
++                                <p class="staff-profil">Marketing</p>
++                            </div>
+                         </li>
+                         <li class="staff-card">
+                             <img src="./img/mixael.jpg" alt="михаил фото" width="270"/>
+-                            <h3 class="staff">Михаил Ермаков</h3>
+-                            <p class="staff-profil" >UI Designer</p>
++                            <div class="staff-name">
++                                <h3 class="staff">Ольга Репина</h3>
++                                <p class="staff-profil" >UI Designer</p>
++                            </div>
+                         </li>
+                     </ul>
+                 </div>
+diff --git a/portfolio.html b/portfolio.html
+index 4f05bef..06e63b1 100644
+--- a/portfolio.html
++++ b/portfolio.html
+@@ -8,6 +8,7 @@
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"rel="stylesheet">
++    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+     <title>Document</title>
+ </head>
+ <body>
+@@ -18,7 +19,7 @@
+             <nav class="nav">
+                 <a class="logo" href="/">Web <span class="logo-black">Studio</span></a>
+                 <ul class="list list-nav">
+-                    <li class="item"><a class="header-buttom text-default" href="">Студия</a></li>
++                    <li class="item"><a class="header-buttom text-default" href="./index.html">Студия</a></li>
+                     <li class="item"><a class="header-buttom text-default" href="./portfolio.html">Портфолио</a></li>
+                     <li class="item"><a class="header-buttom text-default" href="">Контакты</a></li>
+                 </ul>
+@@ -59,48 +60,66 @@
+                 <ul class="portfolio-list list">
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 1,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Технокряк</h3>
+-                        <p class="title-product">Веб-сайт</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Технокряк</h3>
++                            <p class="title-product">Веб-сайт</p>
++                        </div>
+                     </li> 
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 2,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Постер New Orlean vs Golden Star</h3>
+-                        <p class="title-product">Дизайн</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Постер New Orlean vs Golden Star</h3>
++                            <p class="title-product">Дизайн</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 3,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Ресторан Seafood</h3>
+-                        <p class="title-product">Приложение</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Ресторан Seafood</h3>
++                            <p class="title-product">Приложение</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 4,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Проект Prime</h3>
+-                        <p class="title-product">Маркетинг</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Проект Prime</h3>
++                            <p class="title-product">Маркетинг</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 5,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name" >Проект Boxes</h3>
+-                        <p class="title-product">Приложение</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name" >Проект Boxes</h3>
++                            <p class="title-product">Приложение</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 6,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name" >Inspiration has no Borders</h3>
+-                        <p class="title-product">Веб-сайт</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name" >Inspiration has no Borders</h3>
++                            <p class="title-product">Веб-сайт</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 7,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Издание Limited Edition</h3>
+-                        <p class="title-product">Дизайн</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Издание Limited Edition</h3>
++                            <p class="title-product">Дизайн</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 8,9.jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Проект LAB</h3>
+-                        <p class="title-product">Маркетинг</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Проект LAB</h3>
++                            <p class="title-product">Маркетинг</p>
++                        </div>
+                     </li>
+                     <li class="portfolio-item">
+                         <img class="photo" src="./img/img 9,9).jpg" alt="пк" width="370px" />
+-                        <h3 class="title-name">Growing Business</h3>
+-                        <p class="title-product">Приложение</p>
++                        <div class="portfolio-name">
++                            <h3 class="title-name">Growing Business</h3>
++                            <p class="title-product">Приложение</p>
++                        </div>
+                     </li>
+                 </ul>
+             </div>
